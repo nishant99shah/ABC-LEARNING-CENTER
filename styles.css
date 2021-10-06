@@ -1,0 +1,297 @@
+body {
+  font-family: "Charlie Text", Arial, Helvetica, sans-serif;
+  color: black;
+}
+
+.clear {
+  clear: both;
+}
+
+ul {
+  margin-top: 50px;
+  padding: 0;
+  list-style-type: none;
+  background: transparent;
+  position: absolute;
+}
+
+ul li {
+  display: inline-block;
+}
+
+ul li a {
+  color: black;
+  text-decoration: none;
+  padding: 18px;
+  display: -webkit-box;
+  text-align: left;
+  font-size: 20px;
+}
+
+ul li:hover {
+  border-bottom-color: #0052CC;
+  border-bottom-style: solid;
+  color: #0052CC;
+  background-color: #E6E7E8;
+}
+
+ul li a:hover {
+  color: #0052CC;
+}
+
+ul ul {
+  position: absolute;
+  width: 110px;
+  background: lightgrey;
+  display: none;
+  margin-top: 4px;
+  padding-left: 0px;
+}
+
+ul ul li {
+  display: block;
+  background: white;
+  text-align: left;
+}
+
+ul li:hover ul {
+  display: block;
+}
+
+ul li i {
+  color: white;
+  float: right;
+  padding-left: 20px;
+}
+
+nav div {
+  background: blue;
+  color: blue;
+  font-size: 24px;
+  padding: 0.6em;
+  cursor: pointer;
+  display: none;
+}
+
+@media(max-width: 768px) {
+  nav div {
+    display: block;
+  }
+
+  ul {
+    display: none;
+    position: static;
+    background: blue;
+  }
+
+  ul li {
+    display: block;
+  }
+
+  ul ul {
+    position: static;
+    background: blue;
+  }
+}
+
+.navbar {
+  overflow: hidden;
+  background-color: #333;
+}
+
+.navbar a {
+  float: left;
+  display: block;
+  color: white;
+  text-align: center;
+  padding: 14px 15px;
+  text-decoration: none;
+}
+
+.navbar a:hover {
+  background-color: #0052CC;
+  color: white;
+}
+
+.footimg {
+  height: 50px;
+  width: 50px;
+}
+
+#thanks {
+  text-align: center;
+  font-size: 20px;
+}
+
+.fot-left {
+  float: left;
+  height: 50px;
+  width: 50%;
+  margin-left: 25px;
+  margin-top: 25px;
+  text-align: left;
+}
+
+.fot {
+  float: right;
+  height: 50px;
+  width: 45%;
+  text-align: right;
+  margin-right: 25px;
+}
+
+.dateandtime {
+  text-align: right;
+  color: black;
+  margin-right: 25px;
+  margin-top: 25px;
+  height: 50px;
+  width: 45%;
+  float: right;
+}
+
+.mySlides {
+  display: none;
+}
+
+.first-screen {
+  height: auto;
+  background-attachment: fixed;
+  background-position: 100%;
+  text-align: center;
+}
+
+#pageContent {}
+
+.demo {
+  color: black;
+}
+
+.fot-left {
+  float: left;
+  height: 50px;
+  width: 50%;
+  margin-left: 25px;
+  margin-top: 25px;
+  text-align: left;
+}
+
+.fot {
+  float: right;
+  height: 50px;
+  width: 45%;
+  text-align: right;
+  margin-right: 25px;
+}
+
+.dateandtime {
+  text-align: right;
+  color: black;
+  margin-right: 25px;
+  margin-top: 25px;
+  height: 50px;
+  width: 45%;
+  float: right;
+}
+
+.breadcrumb {
+  display: table;
+  box-shadow: 0 0 15px 1px rgba(0, 0, 0, 0.35);
+  overflow: hidden;
+  border-radius: 5px;
+  counter-reset: flag;
+  margin-left: 230px;
+}
+
+.breadcrumb a {
+  text-decoration: none;
+  outline: none;
+  display: block;
+  float: left;
+  font-size: 12px;
+  line-height: 36px;
+  color: white;
+  padding: 0 10px 0 60px;
+  background: #666;
+  background: linear-gradient(#666, #333);
+  position: relative;
+}
+
+.breadcrumb a:first-child {
+  padding-left: 46px;
+  border-radius: 5px 0 0 5px;
+}
+
+.breadcrumb a:first-child:before {
+  left: 14px;
+}
+
+.breadcrumb a:last-child {
+  border-radius: 0 5px 5px 0;
+  padding-right: 20px;
+}
+
+/*hover/active styles*/
+.breadcrumb a.active, .breadcrumb a:hover {
+  background: #333;
+  background: linear-gradient(#333, #000);
+}
+
+.breadcrumb a.active:after, .breadcrumb a:hover:after {
+  background: #333;
+  background: linear-gradient(135deg, #333, #000);
+}
+
+/*adding the arrows for the breadcrumbs using rotated pseudo elements*/
+.breadcrumb a:after {
+  content: '';
+  position: absolute;
+  top: 0;
+  right: -18px;
+  width: 36px;
+  height: 36px;
+  transform: scale(0.707) rotate(45deg);
+  z-index: 1;
+  background: #666;
+  background: linear-gradient(135deg, #666, #333);
+  box-shadow:
+    2px -2px 0 2px rgba(0, 0, 0, 0.4),
+    3px -3px 0 2px rgba(255, 255, 255, 0.1);
+  border-radius: 0 5px 0 50px;
+}
+
+.breadcrumb a:last-child:after {
+  content: none;
+}
+
+.breadcrumb a:before {
+  content: counter(flag);
+  counter-increment: flag;
+  border-radius: 100%;
+  width: 20px;
+  height: 20px;
+  line-height: 20px;
+  margin: 8px 0;
+  position: absolute;
+  top: 0;
+  left: 30px;
+  background: #444;
+  background: linear-gradient(#444, #222);
+  font-weight: bold;
+}
+
+.flat a, .flat a:after {
+  background: white;
+  color: black;
+  transition: all 0.5s;
+}
+
+.flat a:before {
+  background: white;
+  box-shadow: 0 0 0 1px #ccc;
+}
+
+.flat a:hover, .flat a.active,
+.flat a:hover:after, .flat a.active:after {
+  background: #9EEB62;
+}

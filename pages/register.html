@@ -1,0 +1,279 @@
+<head>
+  <meta charset="UTF-8">
+  <style>
+    body {
+      padding: 0;
+      margin: 0;
+      font-family: arial;
+    }
+
+    /*sinup form*/
+    .form-signup {
+
+      width: 30%;
+      height: 800px;
+      background-color: #f2f2f2;
+      margin: 0 auto;
+      border: 1px solid black;
+      border-radius: 10px;
+    }
+
+    .form-signup a {
+      text-decoration: none;
+      font-size: 14px;
+      margin-bottom: 20px;
+    }
+
+    .form-signup label {
+      margin-top: 20px;
+      display: block;
+      padding-left: 40px;
+      text-align: left;
+    }
+
+    .form-signup input {
+      width: 85%;
+      border: 1px solid #ccc;
+      border-radius: 5px;
+      box-sizing: border-box;
+      height: 30px;
+      padding: 20px;
+      margin-top: 10px;
+
+    }
+
+    .form-signup textarea {
+      border: none;
+      border: 2px solid #378cc0;
+      background: #378cc0;
+      color: darkgreen;
+      float: right;
+      margin-right: 12px;
+    }
+
+    .form-signup input[type=submit] {
+      height: 44px;
+      width: 150px;
+      padding: 0px;
+      cursor: pointer;
+      background: -webkit-linear-gradient(left, rgb(148, 115, 221) 0%, rgb(26, 201, 228) 100%);
+      margin-left: -25px;
+      text-align: center;
+      float: left;
+      margin-top: 30px;
+      font-size: 18px;
+      font-weight: 600;
+      color: rgb(255, 255, 255);
+      line-height: 1;
+      border-radius: 5px;
+    }
+
+    .form-signup input[type=reset] {
+      height: 44px;
+      width: 150px;
+      background: -webkit-linear-gradient(left, rgb(148, 115, 221) 0%, rgb(26, 201, 228) 100%);
+      margin-right: 40px;
+      text-align: center;
+      margin-top: 30px;
+      font-size: 18px;
+      color: rgb(255, 255, 255);
+      line-height: 1;
+      border-radius: 5px;
+      font-weight: bold;
+      cursor: pointer;
+      padding: 5px 12px;
+      float: right;
+      display: block;
+    }
+
+    .form-signup input[type=checkbox] {
+      width: 20px;
+      display: block;
+      float: left;
+      margin-left: 40px;
+    }
+
+    .form-signup input[type=select] {
+      height: 14px;
+      width: 19px;
+      margin-top: -5px;
+      margin-left: 18px;
+    }
+
+    .footer {
+      width: 100%;
+
+    }
+
+
+
+    #thanks {
+      display: block
+    }
+  </style>
+</head>
+
+<body>
+  <div class="project" style="margin: auto;">
+
+    <img src="img/registerwith.png" alt="about" height="550px" width="1730px">
+    <div class="breadcrumb flat" style="margin-top: 40px; margin-left: 230px; margin-bottom: 100px; ">
+      <a href="#">Home</a>
+      <a href="#register" class="active">Register</a>
+    </div>
+    <div class="form-signup" id="signup">
+      <form method="post">
+        <h1>REGISTER WITH US</h1>
+
+        <label for="firstname">First Name: </label><input type="text" class="fname" name="firstname" placeholder="Enter First Name">
+
+        <label for="lastname">Last Name: </label><input type="text" class="lname" name="lastname" placeholder="Enter Last Name">
+
+        <label for="number">Mobile Number: </label><input type="tel" class="number" name="number" placeholder="Enter Mobile Number" maxlength="10">
+
+        <label for="gender" style="float:left;  width: -webkit-fill-available;">
+          <p style="width: min-content; margin: 0px; float: left; ">Gender: </p>
+          <select name="sgender" id="sgender" class="gender" style="margin-left: 20px">
+            <option name="gender" class="gender" value="Select your gender" >Select your gender</option>
+            <option name="gender" class="gender" value="Male" >Male</option>
+            <option name="gender" class="gender" value="Female" >Female</option>
+          </select>
+        </label>
+
+        <label for="email" style="margin-top: 60px">Email: </label><input type="email" class="email" name="email" placeholder="Enter Email Address">
+
+        <label for="password">Password: </label><input type="password" class="pwd" name="password" placeholder="Enter Password">
+
+        <label for="confrm password">Confirm Password: </label><input type="password" class="conpwd" name="password" placeholder="Confirm Password"><br>
+
+        <input type="checkbox" name="checkbox" class="chkbox" value="check" id="agree" required><label style="margin-top: 17px; padding-left: 70px; ">I agree to the <a href="#privacy" style="font-size: 16px; text-decoration: underline;">Privacy
+            Policy</a> of your website</label>
+
+        <input type="submit" name="submit" value="Submit">
+        <input type="reset" name="reset" value="Reset">
+      </form>
+    </div>
+    <br /><br />
+  </div>
+  <script>
+    //onsubmit="return signup()"
+
+
+
+    function tc(a) {
+      var x = document.querySelector(a).value;
+      return x;
+    }
+
+    function msg(a) {
+      var x = document.querySelector(".emsg").innerHTML = a;
+      return x;
+    }
+
+    function msgb(a) {
+      var x = document.querySelector(".emsgb").innerHTML = a;
+      return x;
+    }
+
+    function size(a) {
+      var x = document.querySelector(a).value.length;
+      return x;
+    }
+
+
+
+    function signup() {
+      var hide = document.querySelector(".form-login");
+
+      if (hide.classList[1] == "hidden") {
+        hide.classList.toggle("visible");
+      } else {
+        hide.classList.toggle("hidden");
+      }
+      console.log(hide.classList);
+      return hide;
+    }
+
+    function signup() {
+      if (tc(".fname") == null || tc(".fname") == "") {
+        window.alert("Please Enter First name");
+        return false;
+      }
+      if (tc(".lname") == null || tc(".lname") == "") {
+        window.alert("Please Enter Last name");
+        return false;
+      }
+      if (tc(".number") == null || tc(".number") == "") {
+        window.alert("Please Enter Mobile Number");
+        return false;
+      }
+      if (size(".number") <= 9) {
+        window.alert("Minimum 10 number");
+        return false;
+      }
+      if (tc(".email") == null || tc(".email") == "") {
+        window.alert("Please Enter Email");
+        return false;
+      }
+      if (tc(".pwd") == null || tc(".pwd") == "") {
+        window.alert("Please Enter Password");
+        return false;
+      }
+      if (tc(".pwd") != tc(".conpwd")) {
+        window.alert("Password Miss match");
+        return false;
+      }
+      if (size(".pwd") <= 8) {
+        window.alert("Minimum Password length 8");
+        return false;
+      }
+      return true;
+    }
+
+
+    $(document).ready(function() {
+
+      // process the form
+      $('form').submit(function(event) {
+
+
+        if (signup()) {
+
+
+          // get the form data
+          // there are many ways to get this data using jQuery (you can use the class or id also)
+
+
+          $firstname = $('input[name=firstname]').val();
+          $lastname = $('input[name=lastname]').val();
+          $number = $('input[name=number]').val();
+          $gender = $('#sgender').val();//$('input[name=sgender]').val();
+          $email = $('input[name=email]').val();;
+          $password = $('input[name=password]').val();
+
+          //
+
+          // process the form
+          $.ajax({
+            type: 'POST', // define the type of HTTP verb we want to use (POST for our form)
+            url: 'regi.php', // the url where we want to POST
+            data: 'firstname=' + $firstname + '&lastname=' + $lastname + '&number=' + $number + '&gender=' + $gender + '&email=' + $email + '&password=' + $password, // our data object
+            dataType: 'html', // what type of data do we expect back from the server
+            success: function(data) {
+              console.log(data);
+              $('#thanks').html(data);
+
+              window.location.replace("#Thankyou");
+              $('#thanks').show();
+
+            }
+          })
+        }
+        event.preventDefault();
+
+
+      });
+
+    });
+  </script>
+</body>

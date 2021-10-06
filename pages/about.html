@@ -1,0 +1,255 @@
+<style>
+  html {
+    box-sizing: border-box;
+  }
+
+  *,
+  *:before,
+  *:after {
+    box-sizing: inherit;
+  }
+
+  .column {
+    float: left;
+    width: 33.3%;
+    margin-bottom: 16px;
+    padding: 0 18px;
+    margin-top: 50px
+  }
+
+  @media screen and (max-width: 650px) {
+    .column {
+      width: 100%;
+      display: block;
+    }
+  }
+
+  .card {
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
+    background-color: #E6E7E8;
+
+  }
+
+  .container {
+    padding: 0 16px;
+  }
+
+  .container::after,
+  .row::after {
+    content: "";
+    clear: both;
+    display: table;
+  }
+
+  .title {
+    color: grey;
+  }
+
+
+  h3 {
+    font-size: 30px;
+    color: black;
+    text-align: left;
+
+  }
+
+  p {
+    font-size: 18px;
+    text-align: justify;
+    color: black;
+
+  }
+
+
+  .breadcrumb {
+    display: table;
+    box-shadow: 0 0 15px 1px rgba(0, 0, 0, 0.35);
+    overflow: hidden;
+    border-radius: 5px;
+    counter-reset: flag;
+    margin-left: 230px;
+  }
+
+  .breadcrumb a {
+    text-decoration: none;
+    outline: none;
+    display: block;
+    float: left;
+    font-size: 12px;
+    line-height: 36px;
+    color: white;
+    padding: 0 10px 0 60px;
+    background: #666;
+    background: linear-gradient(#666, #333);
+    position: relative;
+  }
+
+  .breadcrumb a:first-child {
+    padding-left: 46px;
+    border-radius: 5px 0 0 5px;
+  }
+
+  .breadcrumb a:first-child:before {
+    left: 14px;
+  }
+
+  .breadcrumb a:last-child {
+    border-radius: 0 5px 5px 0;
+    padding-right: 20px;
+  }
+
+  /*hover/active styles*/
+  .breadcrumb a.active,
+  .breadcrumb a:hover {
+    background: #333;
+    background: linear-gradient(#333, #000);
+  }
+
+  .breadcrumb a.active:after,
+  .breadcrumb a:hover:after {
+    background: #333;
+    background: linear-gradient(135deg, #333, #000);
+  }
+
+  /*adding the arrows for the breadcrumbs using rotated pseudo elements*/
+  .breadcrumb a:after {
+    content: '';
+    position: absolute;
+    top: 0;
+    right: -18px;
+    width: 36px;
+    height: 36px;
+    transform: scale(0.707) rotate(45deg);
+    z-index: 1;
+    background: #666;
+    background: linear-gradient(135deg, #666, #333);
+    box-shadow:
+      2px -2px 0 2px rgba(0, 0, 0, 0.4),
+      3px -3px 0 2px rgba(255, 255, 255, 0.1);
+    border-radius: 0 5px 0 50px;
+  }
+
+  .breadcrumb a:last-child:after {
+    content: none;
+  }
+
+  .breadcrumb a:before {
+    content: counter(flag);
+    counter-increment: flag;
+    border-radius: 100%;
+    width: 20px;
+    height: 20px;
+    line-height: 20px;
+    margin: 8px 0;
+    position: absolute;
+    top: 0;
+    left: 30px;
+    background: #444;
+    background: linear-gradient(#444, #222);
+    font-weight: bold;
+  }
+
+
+  .flat a,
+  .flat a:after {
+    background: white;
+    color: black;
+    transition: all 0.5s;
+  }
+
+  .flat a:before {
+    background: white;
+    box-shadow: 0 0 0 1px #ccc;
+  }
+
+  .flat a:hover,
+  .flat a.active,
+  .flat a:hover:after,
+  .flat a.active:after {
+    background: #9EEB62;
+  }
+</style>
+
+
+<body>
+  <div class="project" style="margin: auto;">
+
+    <img src="img/about1.png" alt="about" height="550px" width="1730px">
+    <div class="breadcrumb flat" style="margin-top: 40px; margin-left: 230px ">
+      <a href="#">Home</a>
+      <a href="#about" class="active">About</a>
+    </div>
+
+    <div style="width: 1280px; margin-right: 300px; margin-left: 230px;">
+      <div style="width: 100%; height: 150px;">
+        <h3 style="margin-top: 50px; ">OUR MISSION</h3>
+        <p style="float: left; width: 65%">Providing comprehensive, individually focused learning that prepares students
+          for academic and life success, based upon their unique needs and goals.Providing comprehensive, individually focused learning that prepares students of all ages for academic and life success, based upon their unique needs and goals.</p>
+
+        <img src="img/mission.jpg" alt="" style="float: right; width: 30%; " height="260px">
+      </div>
+
+      <div style="width: 65%">
+        <h3 style="margin-top: 100px;"> OUR VISION</h3>
+        <p>To create a healthy and progressive learning environment where conventional teaching methods blend with modern technology, providing a broad spectrum for value based education and international best practices.</p>
+
+
+        <p>ABC Learning Center sets the standard for residential liberal arts and sciences
+          education. We have committed to creating and sustaining the conditions that
+          enable all our students to experience an unparalleled educational journey
+          that is intellectually, socially, and personally transformative.</p>
+      </div>
+
+      <p>We believe a supplemental educational program should…</p>
+      <li style="text-align: left; font-size: 18px;">Provide a positive experience and opportunities for every student to improve their skills and build self-esteem;</li>
+      <li style="text-align: left; font-size: 18px;">Deliver customized educational programs designed to build the foundations of their future success by helping <br>&nbsp;&nbsp;&nbsp;&nbsp; them to become independent learners;</li>
+      <li style="text-align: left; font-size: 18px;">Help all our students to achieve their personal education goals;</li>
+      <li style="text-align: left; font-size: 18px;">Deliver programs for each student to cultivate the learning skills necessary for life success;</li>
+      <li style="text-align: left; font-size: 18px;">Be supported by a highly-qualified team of professionals who understand and meet the needs of each student.</li>
+
+      <h3 style="text-align: center; margin-top: 100px; font-weight: bolder; font-size: 40px;">Meet our team</h3>
+      <p style="text-align:center">We’ve assembled top industry talent to keep you ahead of the curve<br> and tackle your most pressing IT delivery challenges. Meet your <br>Continuum team.</p>
+      <div class="row">
+        <div class="column">
+          <div class="card">
+            <img src="img/222.jpg" alt="Alex" style="width: 390px; height: 350px;">
+            <div class="container">
+              <h2>Alex Williams</h2>
+              <p class="title">CEO & Founder</p>
+              <p>As the CEO of ABC Learning Center, Alex is responsible for the overall strategic direction, profitability and management of the company. Alex is passionate about our clients and is committed to our purpose to make their lives'
+                easier.</p>
+
+            </div>
+          </div>
+        </div>
+
+        <div class="column">
+          <div class="card">
+            <img src="img/11.jpg" alt="Neil" style="width: 390px; height: 350px;">
+            <div class="container">
+              <h2>Neil Caffrey</h2>
+              <p class="title">Director</p>
+              <p>Neil Caffrey is a stalwart of the Education community. He has been instrumental in several initiatives in the education industry which includes among others – use of IT in most universities and reforms in the accreditation of
+                colleges.</p>
+
+            </div>
+          </div>
+        </div>
+        <div class="column">
+          <div class="card">
+            <img src="img/66.jpg" alt="Stefan" style="width: 390px; height: 350px;">
+            <div class="container">
+              <h2>Stefan Marshall</h2>
+              <p class="title">IT Professor</p>
+              <p>Stefan Marshall is an assistant professor of technology in the Information Technology Department. Stefan has Ph.D. & M.A. from Harvard University and B.A. from Duke University. He has 10 years of experience in IT industry. </p>
+
+            </div>
+          </div>
+        </div>
+      </div>
+
+    </div>
+  </div>
+</body>
+
+</html>

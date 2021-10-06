@@ -1,0 +1,157 @@
+<style>
+  .breadcrumb {
+    display: table;
+    box-shadow: 0 0 15px 1px rgba(0, 0, 0, 0.35);
+    overflow: hidden;
+    border-radius: 5px;
+    counter-reset: flag;
+    margin-left: 230px;
+  }
+
+  .breadcrumb a {
+    text-decoration: none;
+    outline: none;
+    display: block;
+    float: left;
+    font-size: 12px;
+    line-height: 36px;
+    color: white;
+    padding: 0 10px 0 60px;
+    background: #666;
+    background: linear-gradient(#666, #333);
+    position: relative;
+  }
+
+  .breadcrumb a:first-child {
+    padding-left: 46px;
+    border-radius: 5px 0 0 5px;
+  }
+
+  .breadcrumb a:first-child:before {
+    left: 14px;
+  }
+
+  .breadcrumb a:last-child {
+    border-radius: 0 5px 5px 0;
+    padding-right: 20px;
+  }
+
+  /*hover/active styles*/
+  .breadcrumb a.active,
+  .breadcrumb a:hover {
+    background: #333;
+    background: linear-gradient(#333, #000);
+  }
+
+  .breadcrumb a.active:after,
+  .breadcrumb a:hover:after {
+    background: #333;
+    background: linear-gradient(135deg, #333, #000);
+  }
+
+  /*adding the arrows for the breadcrumbs using rotated pseudo elements*/
+  .breadcrumb a:after {
+    content: '';
+    position: absolute;
+    top: 0;
+    right: -18px;
+    width: 36px;
+    height: 36px;
+    transform: scale(0.707) rotate(45deg);
+    z-index: 1;
+    background: #666;
+    background: linear-gradient(135deg, #666, #333);
+    box-shadow:
+      2px -2px 0 2px rgba(0, 0, 0, 0.4),
+      3px -3px 0 2px rgba(255, 255, 255, 0.1);
+    border-radius: 0 5px 0 50px;
+  }
+
+  .breadcrumb a:last-child:after {
+    content: none;
+  }
+
+  .breadcrumb a:before {
+    content: counter(flag);
+    counter-increment: flag;
+    border-radius: 100%;
+    width: 20px;
+    height: 20px;
+    line-height: 20px;
+    margin: 8px 0;
+    position: absolute;
+    top: 0;
+    left: 30px;
+    background: #444;
+    background: linear-gradient(#444, #222);
+    font-weight: bold;
+  }
+
+
+  .flat a,
+  .flat a:after {
+    background: white;
+    color: black;
+    transition: all 0.5s;
+  }
+
+  .flat a:before {
+    background: white;
+    box-shadow: 0 0 0 1px #ccc;
+  }
+
+  .flat a:hover,
+  .flat a.active,
+  .flat a:hover:after,
+  .flat a.active:after {
+    background: #9EEB62;
+  }
+</style>
+<div class="project" style="margin: auto;">
+
+  <img src="img/privacy.png" alt="about" height="550px" width="1730px">
+
+  <div class="breadcrumb flat" style="margin-top: 40px; margin-left: 230px ">
+    <a href="#">Home</a>
+    <a href="#privacy" class="active">Privacy</a>
+  </div>
+  <div style="width: 1280px; margin-right: 300px; margin-left: 230px; margin-top: 70px; ">
+    <h2 style="padding-left: 40px; font-size: 30px; text-align: left;"> Terms and Conditions</h2>
+
+    <p style="padding-left: 40px; padding-right: 55px; font-size: 18px; text-align: justify;">At ABC Learning Center, one of our main priorities is the privacy of our visitors. This Privacy Policy document contains types of information that is
+      collected and recorded by ABC Learning Center and how we use it.If you have additional questions or require more information about our Privacy Policy, do not hesitate to contact us through email at abclearningcenter@gmail.com</p>
+
+
+
+    <h2 style="padding-left: 40px; font-size: 30px; text-align: left;">Log Files</h2>
+
+    <p style="padding-left: 40px; padding-right: 55px; font-size: 18px; text-align: justify;">ABC Learning Center follows a standard procedure of using log files. These files log visitors when they visit websites. All hosting companies do this and a
+      part of hosting services' analytics. The information collected by log files include internet protocol (IP) addresses, browser type, Internet Service Provider (ISP), date and time stamp, referring/exit pages, and possibly the number of clicks.
+      These are not linked to any information that is personally identifiable. The purpose of the information is for analyzing trends, administering the site, tracking users' movement on the website, and gathering demographic information.</p>
+
+    <h2 style="padding-left: 40px; font-size: 30px; text-align: left;">Cancellation Policy</h2>
+
+    <p style="padding-left: 40px; padding-right: 55px; font-size: 18px; text-align: justify;">Third-party ad servers or ad networks uses technologies like cookies, JavaScript, or Web Beacons that are used in their respective advertisements and links
+      that appear on ABC Learning Center, which are sent directly to users' browser. They automatically receive your IP address when this occurs. These technologies are used to measure the effectiveness of their advertising campaigns and/or to
+      personalize the advertising content that you see on websites that you visit.Note that ABC Learning Center has no access to or control over these cookies that are used by third-party advertisers.</p>
+
+
+
+    <h2 style="padding-left: 40px; font-size: 30px; text-align: left;">Third Party Privacy Policies</h2>
+
+    <p style="padding-left: 40px; padding-right: 55px; font-size: 18px; text-align: justify;">ABC Learning Center's Privacy Policy does not apply to other advertisers or websites. Thus, we are advising you to consult the respective Privacy Policies
+      of these third-party ad servers for more detailed information. It may include their practices and instructions about how to opt-out of certain options. You may find a complete list of these Privacy Policies and their links here: Privacy Policy
+      Links.You can choose to disable cookies through your individual browser options. To know more detailed information about cookie management with specific web browsers, it can be found at the browsers' respective websites. What Are Cookies?</p>
+
+
+
+    <h2 style="padding-left: 40px; font-size: 30px;text-align: left;">Online Privacy Policy Only</h2>
+
+    <p style="padding-left: 40px; padding-right: 55px; font-size: 18px; text-align: justify;">This Privacy Policy applies only to our online activities and is valid for visitors to our website with regards to the information that they shared and/or
+      collect in ABC Learning Center. This policy is not applicable to any information collected offline or via channels other than this website.</p>
+
+    <h2 style="padding-left: 40px; font-size: 30px; text-align: left;">Consent</h2>
+
+    <p style="padding-left: 40px; padding-right: 55px; font-size: 18px; text-align: justify;">By using our website, you hereby consent to our Privacy Policy and agree to its Terms and Conditions.</p>
+  </div>
+</div>

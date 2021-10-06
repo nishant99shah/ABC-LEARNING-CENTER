@@ -1,0 +1,409 @@
+<script src="js/script1.js"></script>
+<script type='text/javascript'>
+  jQuery(document).ready(function($) {
+    $(".tab").simpleTab({
+      defaultSkin: true //default value is false.
+    });
+  });
+</script>
+
+<style>
+  html {
+    height: 200px;
+  }
+
+  .tabContent {
+    font-size: 25px;
+  }
+
+  #htmlcontent1 {
+    background: #ffffff;
+    padding: 40px;
+    height: 1200px;
+  }
+
+  #htmlschedule2 {
+    background: #eaf5ed;
+  }
+
+  ul ul {
+    position: absolute;
+    min-p: 200px;
+    background: white;
+    display: none;
+  }
+
+  ul ul li {
+    display: block;
+    background: white;
+  }
+
+  ul ul li a {
+    color: black;
+  }
+
+  ul li:hover ul {
+    display: block;
+  }
+
+
+  ul li i {
+    color: #292929;
+    float: right;
+    padding-left: 20px;
+  }
+
+  h1,
+  h2,
+  h3,
+  h4,
+  h5 {
+    text-align: justify;
+  }
+
+  .CollapsiblePanel {
+    margin: 0px;
+    padding: 0px;
+    border-left: solid 1px #CCC;
+    border-right: solid 1px #999;
+    border-top: solid 1px #999;
+    border-bottom: solid 1px #CCC;
+    width: 1000px;
+  }
+
+  .CollapsiblePanelTab {
+    font: bold 0.7em sans-serif;
+    background-color: #A5A5A5;
+    border-bottom: solid 1px #CCC;
+    margin: 0px;
+    padding: 15px;
+    color: white;
+    -moz-user-select: none;
+    -khtml-user-select: none;
+  }
+
+  .CollapsiblePanelContent {
+    margin: 0px;
+    padding: 0px;
+    height: 150px;
+    background: #e1e1e1;
+  }
+
+  .CollapsiblePanelContent ul {
+    list-style-type: none;
+    height: 200px;
+  }
+
+
+  ol,
+  ul,
+  ul li {
+    list-style: none;
+  }
+
+  a:active,
+  a:focus,
+  a:hover,
+  a:link,
+  a:visited {
+    text-decoration: none
+  }
+
+  .simple-tab {
+    position: relative;
+    z-index: 1;
+    margin-bottom: -1px;
+    margin-top: 0px;
+    padding-left: 1px;
+    overflow: hidden
+  }
+
+  .simple-tab>li {
+    position: relative;
+    float: left;
+    margin-top: 3px;
+    margin-left: -1px;
+    border: 1px solid #ddd;
+    background: #f5f5f5
+  }
+
+  .simple-tab>li>a {
+    display: table-cell;
+    vertical-align: middle;
+    padding: 0 35px;
+    max-width: 250px;
+    height: 50px;
+    overflow: hidden;
+    color: #777;
+    font-size: 15px;
+    letter-spacing: .08em;
+    line-height: 1.66em;
+    text-overflow: ellipsis;
+    white-space: none
+  }
+
+  .simple-tab>li.selected {
+    z-index: 9;
+    margin-top: 0;
+    box-shadow: 0 -1px 10px rgba(0, 0, 0, .1);
+    border: 1px solid black;
+    background: #557FFF;
+  }
+
+  .simple-tab>li.selected>a {
+    color: white;
+  }
+
+  .simple-tab>li.dimmed>a {
+    color: #d5d5d5
+  }
+
+  .simple-tab-content {
+
+    background: #fff;
+
+    min-height: 200px
+  }
+
+  li.left-req {
+    float: left;
+    line-height: 25px;
+    font-size: 20px;
+  }
+
+  p.para {
+    text-align: justify;
+    font-size: 20px;
+    width: 60%;
+    float: left;
+    margin: 0px;
+    margin-bottom: 20px;
+  }
+
+  h2.javaprog {
+    margin-top: 20px;
+    text-align: center;
+    font-family: Arial;
+    font-size: 50px;
+    font-weight: 300;
+    font-variant: all-petite-caps;
+  }
+
+  ul.drop {
+    padding-top: 25px;
+    text-decoration: none;
+    position: relative;
+    color: black;
+    word-spacing: 5px;
+    margin: 0;
+  }
+
+  p.column {
+    margin: 0px;
+    font-size: 20px;
+    text-align: initial;
+  }
+</style>
+
+
+
+
+
+<body>
+  <div class="project" style="margin: auto;">
+
+    <img src="img/htmldetail.png" alt="about" height="550px" width="1730px">
+    <div class="breadcrumb flat" style="margin-top: 40px; margin-left: 230px ">
+      <a href="#">Home</a>
+      <a href="#courses">Courses</a>
+      <a href="#htmldetail" class="active">HTML</a>
+    </div>
+
+    <div class="main-tab-content" style="  padding-top: 100px; width: 1280px; margin-right: 300px; margin-left: 230px;">
+
+
+
+      <div class="tab-border" style="border: 1px white;">
+        <!-- Tab -->
+        <ul class="tab simple-tab" data-tab-name="tab1">
+          <li><a href="#htmlcontent1">Details</a></li>
+          <li><a href="#htmlschedule2">Schedule</a></li>
+        </ul>
+
+        <!-- Content -->
+        <div class="tabContent" id="htmlcontent1">
+          <div>
+            <h2 class="javaprog">Learn HTML Programming From Scratch</h2>
+
+            <div>
+              <h3 style="text-align: left;  font-size: 24px; font-weight: 500">
+                Learn To Build Awesome Web Sites Using HTML and CSS. Web Development With HTML Made Easy!
+              </h3>
+
+
+              <h2 style="float: left; width: 50%; margin-top: 0px;">What you'll learn</h2>
+              <img src="img/htcs.png" alt="programming" style="float: right; height: 250px; width: 450px;">
+
+              <p style=" height: 9vh; text-align: justify;  font-size: 20px; float: left; width: 60%; margin-top: 0px; margin-bottom: 17px;">
+                1. By the end of the course you will be able to create full fledged HTML5 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;websites <br>
+                2. &nbsp;You will have through understanding of both HTML and CSS <br>
+                3. &nbsp;Understand the Major HTML Attributes <br>
+                4. &nbsp;Build Basic Websites From Scratch <br>
+                5. &nbsp;Use Images With HTML <br>
+                &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;And Much More....
+              </p>
+
+              <h5 style="margin: 0px; width: -webkit-fill-available; height: 50px; text-align: left; padding-top: 255px;"> Requirements</h5><br>
+
+              <li class="left-req">No HTML or CSS or Web Development prior knowledge is required. You will learn all that in this course!</li><br>
+              <li class="left-req">Any HTML editor and HTML5 compatible web browser</li><br>
+              <li class="left-req">You just need a computer with Internet access and a Web Browser</li><br>
+              <li class="left-req">There are no other tools needed</li><br>
+              <li class="left-req">Basic computer skills</li>
+
+              <h3 style="padding-top: 25px; margin-bottom: 0px;">Description</h3>
+
+              <h4>This course is designed to help beginners to learn the basics of HTML & CSS.</h4>
+              <img src="img/ht1.jpg" alt="programming" style="float: right; height: 270px; width: 450px;">
+
+              <p class="para">In this course I'll teach you HTML programming from the ground up. </p>
+
+              <p class="para">If you've ever wanted to build web sites, this is the course for you. HTML makes up every single website on the Internet. </p>
+
+              <p class="para">About CSS, you will learn the definition of it and what is the purpose of using it. You then, will learn how the CSS structure parts work </p>
+
+              <p class="para">HTML5 is one of the hot web technologies and is widely gaining acceptance across mobile and web. In our course you get a complete resource which can get you started on application development for HTML5. </p>
+
+              <p class="para">In this course you work on actual examples and go through important concepts required for thorough knowledge.</p>
+
+
+
+
+            </div>
+          </div>
+        </div>
+
+
+        <div class="tabContent" id="htmlschedule2" style="background: white; ">
+
+
+          <h2 class="javaprog"> Schedule For HTML </h2>
+          <div align="center" style="font-size:35px; height: 1399px; width: fit-content; margin: auto; border: 5px solid black;">
+
+            <div class="CollapsiblePanel">
+              <div align="left" class="CollapsiblePanelTab"> Introduction
+                <div style="float:right;"> Day 1 (3 hours)</div>
+              </div>
+              <div class="CollapsiblePanelContent" style="font-size:25px;" align="left">
+                <ul class="drop">
+                  <p class="column"> - Getting Started<br>
+                    - Introduction <br>
+                    - Requirements <br>
+                    - Understanding HTML <br>
+                  </p>
+                </ul>
+              </div>
+            </div>
+
+            <div class="CollapsiblePanel">
+              <div align="left" class="CollapsiblePanelTab"> Introduction to HTML 5
+                <div style="float:right;"> Day 2 (3 hours)</div>
+              </div>
+              <div class="CollapsiblePanelContent">
+                <ul class="drop">
+                  <p class="column"> - New Tags and Elements <br>
+                    - HTML Tables and Lists <br>
+                    - New Form Elements Part 1<br>
+                    - New Form Elements Part 2 <br>
+
+                  </p>
+                </ul>
+              </div>
+            </div>
+
+
+
+            <div class="CollapsiblePanel">
+              <div align="left" class="CollapsiblePanelTab"> HTML5 Features
+                <div style="float:right;"> Day 3 (3 hours)</div>
+              </div>
+              <div class="CollapsiblePanelContent">
+                <ul class="drop">
+                  <p class="column"> - HTML5 Feature Detection and Drag and Drop <br>
+                    - HTML5 Multimedia <br>
+                    - HTML5 Graphics <br>
+                    - Assignment 1
+                  </p>
+                </ul>
+              </div>
+            </div>
+
+            <div class="CollapsiblePanel">
+              <div align="left" class="CollapsiblePanelTab"> Learning CSS Basics
+                <div style="float:right;"> Day 4 (3 hours)</div>
+              </div>
+              <div class="CollapsiblePanelContent">
+                <ul class="drop">
+                  <p class="column"> - Understanding CSS <br>
+                    - CSS Ruleset<br>
+                    - CSS Applicable Methods Explanation<br>
+                    - Assignment 2
+                  </p>
+                </ul>
+              </div>
+            </div>
+
+            <div class="CollapsiblePanel">
+              <div align="left" class="CollapsiblePanelTab"> HTML with CSS
+                <div style="float:right;"> Day 5 (3 hours)</div>
+              </div>
+              <div class="CollapsiblePanelContent">
+                <ul class="drop">
+                  <p class="column"> - CSS Selectors</<br>
+
+                    - CSS Border <br>
+                    - CSS Float <br>
+                    - CSS Font Size, Family, Style, etc.. <br>
+
+                    - Assignment 3<br>
+                  </p>
+                </ul>
+              </div>
+            </div>
+
+            <div class="CollapsiblePanel">
+              <div align="left" class="CollapsiblePanelTab"> Build a Project in HTML5
+                <div style="float:right;"> Day 6 (3 hours)</div>
+              </div>
+              <div class="CollapsiblePanelContent">
+                <ul class="drop">
+                  <p class="column"> - Project Introduction<br>
+                    - Adding tasks to LocalStorage <br>
+                    - Editing & Updating Tasks from LocalStorage <br>
+                    - Project Summary <br>
+                    - Assignment 4
+                  </p>
+                </ul>
+              </div>
+            </div>
+
+            <div class="CollapsiblePanel">
+              <div align="left" class="CollapsiblePanelTab"> Summative Assessment 1
+                <div style="float:right;"> 100 Marks</div>
+              </div>
+            </div>
+
+            <div class="CollapsiblePanel">
+              <div align="left" class="CollapsiblePanelTab"> Summative Assessment 2
+                <div style="float:right;"> 100 Marks</div>
+              </div>
+            </div>
+
+            <br>
+          </div>
+        </div>
+
+      </div>
+    </div>
+  </div>
+</body>
